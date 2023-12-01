@@ -1,5 +1,23 @@
-name: Alps Trips
+name: alps_trips
 type: theme
+description: 'This is a custom theme'
 'base theme': stable9
+starterkit: true
+
+libraries:
+  - alps_trips/base
+  - alps_trips/messages
+  - alps_trips/main
+libraries-extend:
+  user/drupal.user:
+    - alps_trips/user
+  core/drupal.dropbutton:
+    - alps_trips/dropbutton
+  core/drupal.dialog:
+    - alps_trips/dialog
+  file/drupal.file:
+    - alps_trips/file
+  core/drupal.progress:
+    - alps_trips/progress
 core_version_requirement: ^10
-description: 'alps_trips theme'
+generator: 'starterkit_theme:10.1.1'

@@ -2,13 +2,35 @@
   "name": "alps_trips",
   "version": "1.0.0",
   "description": "Alps Trips dependencies",
-  "author": "Luca Lusso",
+  "author": "Shruthi Nagaraju",
   "license": "GPL-3.0",
-  "dependencies": {
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.54.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-yml": "^1.10.0",
+    "mini-css-extract-plugin": "^2.7.6",
+    "postcss": "^8.4.31",
+    "postcss-loader": "^7.3.3",
+    "prettier": "^3.1.0",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-tailwindcss": "^0.0.7",
+    "stylelint-order": "^6.0.3",
+    "tailwindcss": "3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
   },
   "scripts": {
-    "build:dev": "ls",
-    "lint:js": "ls",
-    "lint:css": "ls"
+    "build": "webpack --config webpack.config.js",
+    "build:dev": "webpack --config webpack.config.js --mode development",
+    "start": "webpack --watch",
+    "start:dev": "webpack --watch --mode development",
+    "lint:css": "stylelint \"**/*.css\"",
+    "lint:js": "node ./node_modules/eslint/bin/eslint.js --fix ."
   }
 }
